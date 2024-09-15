@@ -50,15 +50,15 @@ app.get("/",async(req,resp)=>{
     resp.send(data2)
 })
 
-// app.get("/:key",async(req,resp)=>{
-//     const data2= await data.find({pid:req.params.key})
-//     resp.send(data2)
-// })
+app.get("/:key",async(req,resp)=>{
+    const data2= await data.find({pid:req.params.key})
+    resp.send(data2)
+})
 
-// app.get("/search/:cat",async(req,resp)=>{
-//     const data2= await data.find({pcat:req.params.cat})
-//     resp.send(data2)
-// })
+app.get("/search/:cat",async(req,resp)=>{
+    const data2= await data.find({pcat:req.params.cat})
+    resp.send(data2)
+})
 
 app.post('/register',async(req,resp)=>{
     upload(req,resp,(err)=>{
